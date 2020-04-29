@@ -1,0 +1,32 @@
+html, body {
+  margin: 0 auto;
+  width: 100%;
+  background-color: #192346;
+  font-size: 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  color: #FFF; }
+
+.box {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid #4C5F7F;
+  border-radius: 25px;
+  margin: 3% 25%;
+  padding: 1.5rem; }
+  .box .rock, .box .paper, .box .scissors {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    font-weight: 700; }
+  .box .card-score {
+    background-color: #FAFAFA;
+    color: #514F5D;
+    border-radius: 5px;
+    padding: 5px 20px; }
+    .box .card-score .score {
+      font-weight: 700;
+      text-align: center; }
+    .box .card-score:last-child {
+      margin-top: -15%;
+      margin-left: auto; }

@@ -1,0 +1,23 @@
+{
+  "name": "rock-paper-scissors-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Rock, Paper, Scissors coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vale-c/rock-paper-scissors.git"
+  },
+  "author": "Valentina Calabrese",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vale-c/rock-paper-scissors/issues"
+  },
+  "homepage": "https://github.com/vale-c/rock-paper-scissors#readme",
+  "dependencies": {
+    "node-sass": "^4.14.0"
+  }
+}

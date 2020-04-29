@@ -1,0 +1,72 @@
+$white: #FFF;
+$blue-bg: #192346;
+
+//Main Button Colors
+$yellow: #ECA20E;
+$blue: #506AF3;
+$red: #E13E5B;
+
+//Hue Blue border
+$blue-border: #4C5F7F;
+
+//Score Card Color 
+$card-score-bg: #FAFAFA;
+$score-text: #514F5D;
+
+html, body {
+  margin: 0 auto;
+  width: 100%;
+  background-color:  $blue-bg;
+  font-size: 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+
+    border: 5px solid $blue-border;
+    border-radius: 25px;
+    margin: 3% 25%;
+    padding: 1.5rem;
+
+    .rock, .paper, .scissors {
+      flex-grow: 1;
+      display: flex; 
+      align-items:center;
+
+      font-weight: 700;
+    }
+
+    .card-score {
+      background-color: $card-score-bg;
+      color: $score-text;
+      border-radius: 5px;
+      padding: 5px 20px;
+
+      .score {
+        font-weight: 700;
+        text-align: center;
+      }
+    
+      &:last-child {
+        margin-top: -15%;
+        margin-left: auto;
+      }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+// .attribution { font-size: 12px; text-align: center; }
+// .attribution a { color: $white; }
