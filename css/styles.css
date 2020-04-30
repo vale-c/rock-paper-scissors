@@ -25,23 +25,33 @@ body {
     display: flex;
     align-items: center;
     font-weight: 700; }
+    .box .rock.rocks,
+    .box .paper.rocks,
+    .box .scissors.rocks {
+      margin-top: 1rem; }
     .box .rock.scissors,
     .box .paper.scissors,
     .box .scissors.scissors {
-      margin-bottom: 0.7rem; }
+      margin-bottom: 1rem; }
   .box .card-score {
     background-color: #FAFAFA;
     color: #514F5D;
     border-radius: 5px;
-    padding: 5px 20px; }
+    padding: 25px 40px; }
+    .box .card-score .score-title {
+      font-size: 16px; }
+      .box .card-score .score-title h4 {
+        font-weight: 400;
+        color: #B5B8C7; }
     .box .card-score .score {
       font-weight: 700;
       text-align: center; }
     .box .card-score:last-child {
-      margin-top: -15%;
+      margin-top: -20%;
       margin-left: auto; }
 
 .choices {
+  cursor: pointer;
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(2, 400px);
