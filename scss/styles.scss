@@ -67,6 +67,8 @@ body {
       h4 {
         font-weight: 400;
         color: $score-number;
+        font-size: 16px;
+        text-align: center;
       }
     }
 
@@ -90,7 +92,7 @@ body {
   grid-template-rows: 80%;
   margin: 0 25%;
   
-  .paper-btn {
+  .btn-paper {
     background-color: $white;
     border: 10px solid $blue;
     padding: 1.6rem;
@@ -103,11 +105,11 @@ body {
     display: block;
     border-radius: 50%;
 
-    .icon-paper {
+    .paper {
   
     }
   }
-  .rock-btn {
+  .btn-rock {
     margin-left: 100%;
     background-color: $white;
     border: 10px solid $red;
@@ -121,11 +123,11 @@ body {
     display: block;
     border-radius: 50%;
 
-    .icon-rock {
+    .rock {
       
     } 
   }
-  .scissors-btn {
+  .btn-scissors {
     background-color: $white;
     border: 10px solid $yellow;
     padding: 1.6rem;
@@ -137,10 +139,23 @@ body {
     background-position: center;
     display: block;
     border-radius: 50%;
-    .icon-scissors {
+    .scissors {
     
     }
   }
+}
+
+.restart-btn {
+  border-radius: 5px;
+  background-color: $card-score-bg;
+  color: $score-text;
+  font-size: 16px;
+  font-family: $font;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-left: 45%;
+  margin-bottom: 3rem;
+  padding: 10px 15px;
 }
 
 .text-win {
