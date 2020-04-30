@@ -62,38 +62,60 @@ body {
 .buttons {
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(2, 0.2fr);
-  grid-template-rows: 100%;
-  margin-left: 14rem;
+  grid-template-columns: repeat(2, 400px);
+  grid-template-rows: 80%;
+  margin: 0 25%;
+  
   .paper-btn {
-    padding: 10px;
+
     .icon-paper {
-      border-radius: 50%;
       background-color: $white;
       border: 10px solid $blue;
       margin: 0.5rem;
       padding: 0.5rem;
+    
+      height: 100px;
+      width: 100px;
+
+      background-size: cover;
+      background-position: center;
+      display: block;
+      border-radius: 70px;
     }
   }
   .rock-btn {
     padding: 10px;
-    margin-left: 18rem;
-    .icon-rock{
-      border-radius: 50%;
+    margin-left: 100%;
+    .icon-rock {
       background-color: $white;
       border: 10px solid $red;
       margin: 0.5rem;
       padding: 0.5rem;
+      
+      height: 100px;
+      width: 100px;
+
+      background-size: cover;
+      background-position: center;
+      display: block;
+      border-radius: 70px;
     } 
   }
   .scissors-btn {
       padding: 10px;
     .icon-scissors {
-      border-radius: 50%;
       background-color: $white;
       border: 10px solid $yellow;
       margin: 0.5rem;
       padding: 0.5rem;
+
+      height: 100px;
+      width: 100px;
+
+      background-size: cover;
+      background-position: center;
+      display: block;
+      border-radius: 70px;
     }
   }
 }

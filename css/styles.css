@@ -34,34 +34,47 @@ body {
 .buttons {
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(2, 0.2fr);
-  grid-template-rows: 100%;
-  margin-left: 14rem; }
-  .buttons .paper-btn {
-    padding: 10px; }
-    .buttons .paper-btn .icon-paper {
-      border-radius: 50%;
-      background-color: #FFF;
-      border: 10px solid #506AF3;
-      margin: 0.5rem;
-      padding: 0.5rem; }
+  grid-template-columns: repeat(2, 400px);
+  grid-template-rows: 80%;
+  margin: 0 25%; }
+  .buttons .paper-btn .icon-paper {
+    background-color: #FFF;
+    border: 10px solid #506AF3;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    border-radius: 70px; }
   .buttons .rock-btn {
     padding: 10px;
-    margin-left: 18rem; }
+    margin-left: 100%; }
     .buttons .rock-btn .icon-rock {
-      border-radius: 50%;
       background-color: #FFF;
       border: 10px solid #E13E5B;
       margin: 0.5rem;
-      padding: 0.5rem; }
+      padding: 0.5rem;
+      height: 100px;
+      width: 100px;
+      background-size: cover;
+      background-position: center;
+      display: block;
+      border-radius: 70px; }
   .buttons .scissors-btn {
     padding: 10px; }
     .buttons .scissors-btn .icon-scissors {
-      border-radius: 50%;
       background-color: #FFF;
       border: 10px solid #ECA20E;
       margin: 0.5rem;
-      padding: 0.5rem; }
+      padding: 0.5rem;
+      height: 100px;
+      width: 100px;
+      background-size: cover;
+      background-position: center;
+      display: block;
+      border-radius: 70px; }
 
 .attribution {
   font-size: .875rem;
