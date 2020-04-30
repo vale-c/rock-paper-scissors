@@ -35,13 +35,13 @@ body {
       margin-top: -15%;
       margin-left: auto; }
 
-.buttons {
+.choices {
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(2, 400px);
   grid-template-rows: 80%;
   margin: 0 25%; }
-  .buttons .paper-btn .icon-paper {
+  .choices .paper-btn .icon-paper {
     background-color: #FFF;
     border: 10px solid #506AF3;
     margin: 0.5rem;
@@ -52,9 +52,9 @@ body {
     background-position: center;
     display: block;
     border-radius: 100px; }
-  .buttons .rock-btn {
+  .choices .rock-btn {
     margin-left: 100%; }
-    .buttons .rock-btn .icon-rock {
+    .choices .rock-btn .icon-rock {
       background-color: #FFF;
       border: 10px solid #E13E5B;
       margin: 0.5rem;
@@ -65,7 +65,7 @@ body {
       background-position: center;
       display: block;
       border-radius: 100px; }
-  .buttons .scissors-btn .icon-scissors {
+  .choices .scissors-btn .icon-scissors {
     background-color: #FFF;
     border: 10px solid #ECA20E;
     margin: 0.5rem;
