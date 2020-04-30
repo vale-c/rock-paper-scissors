@@ -13,14 +13,16 @@ $blue-border: #4C5F7F;
 $card-score-bg: #FAFAFA;
 $score-text: #514F5D;
 
-html, body {
-  margin: 0 auto;
-  width: 100%;
+$font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+html, 
+body {
   background-color:  $blue-bg;
-  font-size: 1.5rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  text-transform: uppercase;
   color: $white;
+  font-size: 1.5rem;
+  font-family: $font;
+  margin: 0 auto;
+  text-transform: uppercase;
 }
 
 .box {
@@ -36,37 +38,69 @@ html, body {
       flex-grow: 1;
       display: flex; 
       align-items:center;
-
       font-weight: 700;
     }
 
-    .card-score {
-      background-color: $card-score-bg;
-      color: $score-text;
-      border-radius: 5px;
-      padding: 5px 20px;
+  .card-score {
+    background-color: $card-score-bg;
+    color: $score-text;
+    border-radius: 5px;
+    padding: 5px 20px;
 
-      .score {
-        font-weight: 700;
-        text-align: center;
-      }
-    
-      &:last-child {
-        margin-top: -15%;
-        margin-left: auto;
-      }
+    .score {
+      font-weight: 700;
+      text-align: center;
     }
+  
+    &:last-child {
+      margin-top: -15%;
+      margin-left: auto;
+    }
+  }
 }
 
+.buttons {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(2, 0.2fr);
+  grid-template-rows: 100%;
+  margin-left: 14rem;
+  .paper-btn {
+    padding: 10px;
+    .icon-paper {
+      border-radius: 50%;
+      background-color: $white;
+      border: 10px solid $blue;
+      margin: 0.5rem;
+      padding: 0.5rem;
+    }
+  }
+  .rock-btn {
+    padding: 10px;
+    margin-left: 18rem;
+    .icon-rock{
+      border-radius: 50%;
+      background-color: $white;
+      border: 10px solid $red;
+      margin: 0.5rem;
+      padding: 0.5rem;
+    } 
+  }
+  .scissors-btn {
+      padding: 10px;
+    .icon-scissors {
+      border-radius: 50%;
+      background-color: $white;
+      border: 10px solid $yellow;
+      margin: 0.5rem;
+      padding: 0.5rem;
+    }
+  }
+}
 
+.attribution {
+  font-size: .875rem;
+  margin-top: 12rem;
+  text-align: center;
+}
 
-
-
-
-
-
-
-
-
-// .attribution { font-size: 12px; text-align: center; }
-// .attribution a { color: $white; }
