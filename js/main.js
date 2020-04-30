@@ -60,31 +60,28 @@ function getWinner(p,c) {
 
 function showWinner(winner, computerChoice) {
   if (winner === 'player') {
-    // Inc player score
+    // Increase player score
     scoreboard.player++;
     // Show modal result
     result.innerHTML = `<h1 class="text-win">You Win</h1>
-    <p class="computer">Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() +
-      computerChoice.slice(1)}</strong>
-    </p>
+        <p class="computer">Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}</strong></p>
   `;
     
   } else if (winner === 'computer') {
     scoreboard.computer++;
     result.innerHTML =  `<h1 class="text-lose">You Lose</h1>
-    <p class="computer">Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() +
-      computerChoice.slice(1)}</strong>
-    </p>
+        <p class="computer">Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}</strong></p>
   `;
 
   } else {
     result.innerHTML = `<h1 class="text-draw">It's a draw!</h1>
-    <p class="computer">Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() +
-      computerChoice.slice(1)}</strong></p>`;
+        <p class="computer">Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}</strong></p>
+    `;
   }
   //Show Score
   score.innerHTML = ` <p>Player: ${scoreboard.player}</p>
-                      <p>Computer: ${scoreboard.computer}</p>`;
+                      <p>Computer: ${scoreboard.computer}</p>
+                    `;
 
   modal.style.display = 'block';
 }
