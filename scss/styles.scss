@@ -72,55 +72,54 @@ body {
   margin: 0 25%;
   
   .paper-btn {
+    background-color: $white;
+    border: 10px solid $blue;
+    padding: 1.6rem;
 
+    height: 150px;
+    width: 150px;
+  
+    background-size: cover;
+    background-position: center;
+    display: block;
+    border-radius: 150px;
     .icon-paper {
-      background-color: $white;
-      border: 10px solid $blue;
-      margin: 0.5rem;
-      padding: 1rem;
-
-      height: 100px;
-      width: 100px;
-    
-      background-size: cover;
-      background-position: center;
-      display: block;
-      border-radius: 100px;
+  
     }
   }
   .rock-btn {
     margin-left: 100%;
+    background-color: $white;
+    border: 10px solid $red;
+    padding: 1.6rem;
+
+    height: 150px;
+    width: 150px;
+
+    background-size: cover;
+    background-position: center;
+    display: block;
+    border-radius: 150px;
 
     .icon-rock {
-      background-color: $white;
-      border: 10px solid $red;
-      margin: 0.5rem;
-      padding: 1rem;
-
-      height: 100px;
-      width: 100px;
-
-      background-size: cover;
-      background-position: center;
-      display: block;
-      border-radius: 100px;
+      
     } 
   }
   .scissors-btn {
+    background-color: $white;
+    border: 10px solid $yellow;
+    margin: 0.5rem;
+    padding: 1.6rem;
 
+    height: 150px;
+    width: 150px;
+
+    background-size: cover;
+    background-position: center;
+    display: block;
+    border-radius: 150px;
     .icon-scissors {
-      background-color: $white;
-      border: 10px solid $yellow;
-      margin: 0.5rem;
-      padding: 1rem;
-
-      height: 100px;
-      width: 100px;
-
-      background-size: cover;
-      background-position: center;
-      display: block;
-      border-radius: 100px;
+    
     }
   }
 }
