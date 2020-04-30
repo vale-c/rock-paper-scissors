@@ -1,5 +1,5 @@
 const choices = document.querySelectorAll('.choice');
-const score = document.getElementById('score');
+const score = document.getElementsByClassName('score');
 const result = document.getElementById('result');
 const restart = document.getElementById('restart');
 const modal = document.querySelector('.modal');
@@ -16,6 +16,8 @@ function play(e){
   const computerChoice = getComputerChoice();
   const winner = getWinner(playerChoice, computerChoice);
   showWinner(winner, computerChoice);
+  console.log("Computer score:", scoreboard.computer);
+  console.log("Player score:", scoreboard.player);
 }
 
 // Get Computer choice 
@@ -56,34 +58,33 @@ function getWinner(p,c) {
   }
 }
 
-function showWinner(winner, computerChoice, playerChoice) {
+function showWinner(winner, computerChoice) {
   if (winner === 'player') {
     // Inc player score
     scoreboard.player++;
     // Show modal result
     result.innerHTML = `<h1 class="text-win">You Win</h1>
-    <p>Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() +
-      computerChoice.slice(1)}</strong></p>
+    <p class="computer">Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() +
+      computerChoice.slice(1)}</strong>
+    </p>
   `;
     
   } else if (winner === 'computer') {
     scoreboard.computer++;
     result.innerHTML =  `<h1 class="text-lose">You Lose</h1>
-    <p>Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() +
-      computerChoice.slice(1)}</strong></p>
+    <p class="computer">Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() +
+      computerChoice.slice(1)}</strong>
+    </p>
   `;
 
   } else {
     result.innerHTML = `<h1 class="text-draw">It's a draw!</h1>
-    <p>Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() +
-      computerChoice.slice(1)}</strong></p>
-  `;
+    <p class="computer">Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() +
+      computerChoice.slice(1)}</strong></p>`;
   }
   //Show Score
-  score.innerHTML = `
-  <p>Player: ${scoreboard.player}</p> 
-  <p>Computer: ${scoreboard.computer}</p>
-  `;
+  score.innerHTML = ` <p>Player: ${scoreboard.player}</p>
+                      <p>Computer: ${scoreboard.computer}</p>`;
 
   modal.style.display = 'block';
 }
@@ -95,12 +96,13 @@ function clearModal(e) {
   }
 }
 
+// Restart game
 function restartGame() {
   scoreboard.player = 0;
   scoreboard.computer = 0;
-  score.innerHTML = 
-  ` <p> Player: 0</p>
-    <p> Computer: 0</p>
+  score.innerHTML = `
+    <p>Player: 0</p>
+    <p>Computer: 0</p>
   `;
 }
 

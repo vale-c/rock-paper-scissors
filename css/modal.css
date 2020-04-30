@@ -40,18 +40,18 @@ body {
     border-radius: 5px;
     padding: 25px 40px; }
     .box .card-score .score-title {
-      font-size: 16px; }
-      .box .card-score .score-title h4 {
-        font-weight: 400;
-        color: #B5B8C7;
-        font-size: 16px;
-        text-align: center; }
-    .box .card-score .score {
-      font-weight: 700;
+      font-size: 26px;
+      font-weight: 600;
+      color: #B5B8C7;
       text-align: center; }
     .box .card-score:last-child {
       margin-top: -20%;
       margin-left: auto; }
+    .box .card-score .score p {
+      font-size: 26px;
+      font-weight: 600;
+      color: #514F5D;
+      text-align: center; }
 
 .choices {
   cursor: pointer;

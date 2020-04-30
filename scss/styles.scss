@@ -63,23 +63,24 @@ body {
     padding: 25px 40px;
 
     .score-title {
-      font-size: 16px;
-      h4 {
-        font-weight: 400;
-        color: $score-number;
-        font-size: 16px;
-        text-align: center;
-      }
-    }
-
-    .score {
-      font-weight: 700;
+      font-size: 26px;
+      font-weight: 600;
+      color: $score-number;
       text-align: center;
     }
   
     &:last-child {
       margin-top: -20%;
       margin-left: auto;
+    }
+
+    .score {
+      p {
+        font-size: 26px;
+        font-weight: 600;
+        color: $score-text;
+        text-align: center;
+      }
     }
   }
 }
