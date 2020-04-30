@@ -24,7 +24,8 @@ $font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Ca
 
 html, 
 body {
-  background-color:  $blue-bg;
+  background: $blue-bg;
+  background: linear-gradient(90deg, rgba(25,35,70,1) 0%, rgba(24,39,92,1) 30%, rgba(24,39,92,1) 60%, rgba(25,35,70,1) 90%);
   color: $white;
   font-size: 1.5rem;
   font-family: $font;
