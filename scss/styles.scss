@@ -35,15 +35,20 @@ body {
     flex-direction: column;
 
     border: 5px solid $blue-border;
-    border-radius: 25px;
-    margin: 3% 25%;
-    padding: 1.5rem;
+    border-radius: 20px;
+    margin: 5% 25%;
+    padding: 1rem;
 
-    .rock, .paper, .scissors {
+    .rock, 
+    .paper, 
+    .scissors {
       flex-grow: 1;
       display: flex; 
       align-items:center;
       font-weight: 700;
+      &.scissors {
+        margin-bottom: 0.7rem;
+      }
     }
 
   .card-score {
@@ -82,7 +87,8 @@ body {
     background-size: cover;
     background-position: center;
     display: block;
-    border-radius: 150px;
+    border-radius: 50%;
+
     .icon-paper {
   
     }
@@ -99,7 +105,7 @@ body {
     background-size: cover;
     background-position: center;
     display: block;
-    border-radius: 150px;
+    border-radius: 50%;
 
     .icon-rock {
       
@@ -108,7 +114,6 @@ body {
   .scissors-btn {
     background-color: $white;
     border: 10px solid $yellow;
-    margin: 0.5rem;
     padding: 1.6rem;
 
     height: 150px;
@@ -117,7 +122,7 @@ body {
     background-size: cover;
     background-position: center;
     display: block;
-    border-radius: 150px;
+    border-radius: 50%;
     .icon-scissors {
     
     }

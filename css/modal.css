@@ -15,14 +15,20 @@ body {
   display: flex;
   flex-direction: column;
   border: 5px solid #4C5F7F;
-  border-radius: 25px;
-  margin: 3% 25%;
-  padding: 1.5rem; }
-  .box .rock, .box .paper, .box .scissors {
+  border-radius: 20px;
+  margin: 5% 25%;
+  padding: 1rem; }
+  .box .rock,
+  .box .paper,
+  .box .scissors {
     flex-grow: 1;
     display: flex;
     align-items: center;
     font-weight: 700; }
+    .box .rock.scissors,
+    .box .paper.scissors,
+    .box .scissors.scissors {
+      margin-bottom: 0.7rem; }
   .box .card-score {
     background-color: #FAFAFA;
     color: #514F5D;
@@ -50,7 +56,7 @@ body {
     background-size: cover;
     background-position: center;
     display: block;
-    border-radius: 150px; }
+    border-radius: 50%; }
   .choices .rock-btn {
     margin-left: 100%;
     background-color: #FFF;
@@ -61,18 +67,17 @@ body {
     background-size: cover;
     background-position: center;
     display: block;
-    border-radius: 150px; }
+    border-radius: 50%; }
   .choices .scissors-btn {
     background-color: #FFF;
     border: 10px solid #ECA20E;
-    margin: 0.5rem;
     padding: 1.6rem;
     height: 150px;
     width: 150px;
     background-size: cover;
     background-position: center;
     display: block;
-    border-radius: 150px; }
+    border-radius: 50%; }
 
 .text-win {
   color: #506AF3; }
