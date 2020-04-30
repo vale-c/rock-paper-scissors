@@ -41,40 +41,37 @@ body {
     background-color: #FFF;
     border: 10px solid #506AF3;
     margin: 0.5rem;
-    padding: 0.5rem;
+    padding: 1rem;
     height: 100px;
     width: 100px;
     background-size: cover;
     background-position: center;
     display: block;
-    border-radius: 70px; }
+    border-radius: 100px; }
   .buttons .rock-btn {
-    padding: 10px;
     margin-left: 100%; }
     .buttons .rock-btn .icon-rock {
       background-color: #FFF;
       border: 10px solid #E13E5B;
       margin: 0.5rem;
-      padding: 0.5rem;
+      padding: 1rem;
       height: 100px;
       width: 100px;
       background-size: cover;
       background-position: center;
       display: block;
-      border-radius: 70px; }
-  .buttons .scissors-btn {
-    padding: 10px; }
-    .buttons .scissors-btn .icon-scissors {
-      background-color: #FFF;
-      border: 10px solid #ECA20E;
-      margin: 0.5rem;
-      padding: 0.5rem;
-      height: 100px;
-      width: 100px;
-      background-size: cover;
-      background-position: center;
-      display: block;
-      border-radius: 70px; }
+      border-radius: 100px; }
+  .buttons .scissors-btn .icon-scissors {
+    background-color: #FFF;
+    border: 10px solid #ECA20E;
+    margin: 0.5rem;
+    padding: 1rem;
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    border-radius: 100px; }
 
 .attribution {
   font-size: .875rem;

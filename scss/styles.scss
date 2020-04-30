@@ -72,42 +72,42 @@ body {
       background-color: $white;
       border: 10px solid $blue;
       margin: 0.5rem;
-      padding: 0.5rem;
-    
+      padding: 1rem;
+
       height: 100px;
       width: 100px;
-
+    
       background-size: cover;
       background-position: center;
       display: block;
-      border-radius: 70px;
+      border-radius: 100px;
     }
   }
   .rock-btn {
-    padding: 10px;
     margin-left: 100%;
     .icon-rock {
       background-color: $white;
       border: 10px solid $red;
       margin: 0.5rem;
-      padding: 0.5rem;
-      
+      padding: 1rem;
+
       height: 100px;
       width: 100px;
+
 
       background-size: cover;
       background-position: center;
       display: block;
-      border-radius: 70px;
+      border-radius: 100px;
     } 
   }
   .scissors-btn {
-      padding: 10px;
+
     .icon-scissors {
       background-color: $white;
       border: 10px solid $yellow;
       margin: 0.5rem;
-      padding: 0.5rem;
+      padding: 1rem;
 
       height: 100px;
       width: 100px;
@@ -115,7 +115,7 @@ body {
       background-size: cover;
       background-position: center;
       display: block;
-      border-radius: 70px;
+      border-radius: 100px;
     }
   }
 }
