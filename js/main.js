@@ -9,19 +9,21 @@ const scoreboard = {
   house: 0
 }
 
-// Play game
+// Play Game
 function play(e){
-  restart.style.display = 'inline-block';
+  //restart.style.display = 'inline-block';
 
   const playerChoice = e.target.className;
+
   const houseChoice = getHouseChoice();
 
   const winner = getWinner(playerChoice, houseChoice);
 
-  showWinner(winner, houseChoice);
+  showWinner(winner, houseChoice, playerChoice);
 }
 
-// Get house choice 
+
+// Get House Choice 
 function getHouseChoice() {
   const rand = Math.random();
 
@@ -34,7 +36,7 @@ function getHouseChoice() {
   }
 }
 
-// Get game winner 
+// Get Game Winner 
 function getWinner(p,h) {
   if (p === h) {
     return 'draw';
@@ -59,22 +61,26 @@ function getWinner(p,h) {
   }
 }
 
-function showWinner(winner, houseChoice) {
+function showWinner(winner, houseChoice, playerChoice) {
   if (winner === 'player') {
-    // Increase player score
+    // Increase Player Score
     scoreboard.player++;
-    // Show modal result
-    result.innerHTML = `<h1 class="text-win">You Win</h1>
-    <p>House picked <strong>${houseChoice.charAt(0).toUpperCase() + houseChoice.slice(1)}</strong></p>`;
+    // Show Modal Result
+    result.innerHTML = `<h4 class="text-win">You Win</h4>
+    <p>You picked <strong>${playerChoice}</strong></p>
+    <p>House picked <strong>${houseChoice.charAt(0).toUpperCase() + houseChoice.slice(1)}</strong></p>
+    `;
 
     } else if (winner === 'house') {
     scoreboard.house++;
-    result.innerHTML =  `<h1 class="text-lose">You Lose</h1>
-        <p>House picked <strong>${houseChoice.charAt(0).toUpperCase() + houseChoice.slice(1)}</strong></p>`;
+    result.innerHTML =  `<h4 class="text-lose">You Lose</h4>
+    <p>You picked <strong>${playerChoice}</strong></p>
+    <p>House picked <strong>${houseChoice.charAt(0).toUpperCase() + houseChoice.slice(1)}</strong></p>`;
 
     } else {
-    result.innerHTML = `<h1 class="text-draw">It's a draw!</h1>
-        <p>House picked <strong>${houseChoice.charAt(0).toUpperCase() + houseChoice.slice(1)}</strong></p>`;
+    result.innerHTML = `<h4 class="text-draw">It's a draw!</h4>
+    <p>You picked <strong>${playerChoice}</strong></p>
+    <p>House picked <strong>${houseChoice.charAt(0).toUpperCase() + houseChoice.slice(1)}</strong></p>`;
   }
   // Show Score
   score.innerHTML = `<p>${scoreboard.player}</p> `;
