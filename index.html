@@ -9,53 +9,45 @@
   <link rel="stylesheet" type="text/css" href="css/modal.css">
 
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
-<!-- 
+
+  <!-- 
   Score
   Rules
-
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again -->
+  -->
 
 </head>
 
 <body>
-  <button id="restart" class="restart-btn">Restart Game</button>
-<div class="box">
-  <div class="rock">ROCK</div>
-  <div class="paper">PAPER</div>
-  <div class="scissors">SCISSORS</div>
 
-  <div class="card-score">
-    <h4 class="score-title">SCORE</h4>
-    <div class="score">
-      <p>Player: 0</p>
-      <p>Computer: 0</p>
+  <div class="box">
+    <div class="rock">ROCK</div>
+    <div class="paper">PAPER</div>
+    <div class="scissors">SCISSORS</div>
+
+    <div class="card-score">
+      <h4 class="score-title">SCORE</h4>
+      <div class="score" id="score">
+        <p>0</p>
+      </div>
     </div>
   </div>
-</div>
 
 
-
-<div class="choices">
-  <div class="btn-paper choice">
-    <img class="paper" src="./images/icon-paper.svg" alt="paper">
+  <div class="choices">
+    <div class="btn-paper choice">
+      <img class="paper" src="./images/icon-paper.svg" alt="paper">
+    </div>
+    <div class="btn-scissors choice">
+      <img class="scissors" src="./images/icon-scissors.svg" alt="scissors">
+    </div>
+    <div class="btn-rock choice">
+      <img class="rock" src="./images/icon-rock.svg" alt="rock">
+    </div>
   </div>
-  <div class="btn-scissors choice">
-    <img class="scissors" src="./images/icon-scissors.svg" alt="scissors">
-  </div>
-  <div class="btn-rock choice">
-    <img class="rock" src="./images/icon-rock.svg" alt="rock">
-  </div>
-</div>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://valentinacalabrese.com" target="_blank">Valentina Calabrese</a>.
+    &nbsp;Coded by <a href="https://valentinacalabrese.com" target="_blank">Valentina Calabrese</a>.
   </div>
 
 
@@ -66,11 +58,9 @@
       <img class="icon-rock" src="./images/icon-rock.svg" alt="icon-rock">
       <p>Computer Chose Rock</p>
     </div>
+    <button id="restart" class="restart-btn">Restart Game</button>
   </div>
 
   <script src="js/main.js"></script>
 </body>
-
-
-
 </html>

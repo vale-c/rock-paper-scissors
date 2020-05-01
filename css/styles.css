@@ -112,5 +112,7 @@ body {
 
 .attribution {
   font-size: .875rem;
-  margin-top: 12rem;
+  margin-top: 10rem;
   text-align: center; }
+  .attribution a {
+    color: #FFF; }

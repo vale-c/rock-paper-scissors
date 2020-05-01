@@ -1,27 +1,31 @@
 const choices = document.querySelectorAll('.choice');
-const score = document.getElementsByClassName('score');
+const score = document.getElementById('score');
 const result = document.getElementById('result');
 const restart = document.getElementById('restart');
 const modal = document.querySelector('.modal');
 
 const scoreboard = {
   player: 0,
-  computer: 0
+  house: 0
 }
 
 // Play game
 function play(e){
   restart.style.display = 'inline-block';
+
   const playerChoice = e.target.className;
-  const computerChoice = getComputerChoice();
-  const winner = getWinner(playerChoice, computerChoice);
-  showWinner(winner, computerChoice);
-  console.log("Computer score:", scoreboard.computer);
+  const houseChoice = getHouseChoice();
+
+  const winner = getWinner(playerChoice, houseChoice);
+
+  showWinner(winner, houseChoice);
+
+  console.log("House score:", scoreboard.house);
   console.log("Player score:", scoreboard.player);
 }
 
-// Get Computer choice 
-function getComputerChoice() {
+// Get house choice 
+function getHouseChoice() {
   const rand = Math.random();
 
   if(rand < 0.34) {
@@ -34,55 +38,49 @@ function getComputerChoice() {
 }
 
 // Get game winner 
-function getWinner(p,c) {
-  if (p === c) {
+function getWinner(p,h) {
+  if (p === h) {
     return 'draw';
   } else if (p === 'rock') {
-    if (c === 'paper') {
-      return 'computer';
+    if (h === 'paper') {
+      return 'house';
     } else {
       return 'player';
     }
   } else if (p === 'paper') {
-    if (c === 'scissors') {
-      return 'computer';
+    if (h === 'scissors') {
+      return 'house';
     } else {
       return 'player';
     }
   } else if (p === 'scissors') {
-    if (c === 'rock') {
-      return 'computer';
+    if (h === 'rock') {
+      return 'house';
     } else {
       return 'player';
     }
   }
 }
 
-function showWinner(winner, computerChoice) {
+function showWinner(winner, houseChoice) {
   if (winner === 'player') {
     // Increase player score
     scoreboard.player++;
     // Show modal result
     result.innerHTML = `<h1 class="text-win">You Win</h1>
-        <p class="computer">Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}</strong></p>
-  `;
-    
-  } else if (winner === 'computer') {
-    scoreboard.computer++;
+    <p>House picked <strong>${houseChoice.charAt(0).toUpperCase() + houseChoice.slice(1)}</strong></p>`;
+
+    } else if (winner === 'house') {
+    scoreboard.house++;
     result.innerHTML =  `<h1 class="text-lose">You Lose</h1>
-        <p class="computer">Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}</strong></p>
-  `;
+        <p>House picked <strong>${houseChoice.charAt(0).toUpperCase() + houseChoice.slice(1)}</strong></p>`;
 
-  } else {
+    } else {
     result.innerHTML = `<h1 class="text-draw">It's a draw!</h1>
-        <p class="computer">Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}</strong></p>
-    `;
+        <p>House picked <strong>${houseChoice.charAt(0).toUpperCase() + houseChoice.slice(1)}</strong></p>`;
   }
-  //Show Score
-  score.innerHTML = ` <p>Player: ${scoreboard.player}</p>
-                      <p>Computer: ${scoreboard.computer}</p>
-                    `;
-
+  // Show Score
+  score.innerHTML = `<p>${scoreboard.player}</p> `;
   modal.style.display = 'block';
 }
 
@@ -96,15 +94,14 @@ function clearModal(e) {
 // Restart game
 function restartGame() {
   scoreboard.player = 0;
-  scoreboard.computer = 0;
+  scoreboard.house = 0;
   score.innerHTML = `
-    <p>Player: 0</p>
-    <p>Computer: 0</p>
+    <p>0</p>
   `;
 }
 
 // Event listeners
 choices.forEach(choice => choice.addEventListener('click', play));
 window.addEventListener('click', clearModal);
-window.addEventListener('click', restartGame);
+restart.addEventListener('click', restartGame);
 
