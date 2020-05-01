@@ -13,7 +13,7 @@ const scoreboard = {
 function play(e){
   //restart.style.display = 'inline-block';
 
-  const playerChoice = e.target.className;
+  const playerChoice = e.target.id;
 
   const houseChoice = getHouseChoice();
 

@@ -34,12 +34,10 @@ body {
 .box {
     display: flex;
     flex-direction: column;
-
     border: 5px solid $blue-border;
     border-radius: 20px;
     margin: 5% 25%;
     padding: 1rem;
-
     .rock, 
     .paper, 
     .scissors {
@@ -92,7 +90,7 @@ body {
   grid-template-rows: 80%;
   margin: 0 25%;
   
-  .btn-paper {
+  .paper {
     background-color: $white;
     border: 10px solid $blue;
     padding: 1.6rem;
@@ -116,13 +114,8 @@ body {
       transform: perspective(1px) translateZ(0);
       box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     }
-
-    .paper {
-      
-  
-    }
   }
-  .btn-rock {
+  .rock {
     margin-left: 100%;
     background-color: $white;
     border: 10px solid $red;
@@ -147,12 +140,8 @@ body {
       transform: perspective(1px) translateZ(0);
       box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     }
-
-    .rock {
-      
-    } 
   }
-  .btn-scissors {
+  .scissors {
     background-color: $white;
     border: 10px solid $yellow;
     padding: 1.6rem;
@@ -175,10 +164,6 @@ body {
       -webkit-transform: perspective(1px) translateZ(0);
       transform: perspective(1px) translateZ(0);
       box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    }
-
-    .scissors {
-    
     }
   }
 }

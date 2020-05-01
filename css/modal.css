@@ -59,7 +59,7 @@ body {
   grid-template-columns: repeat(2, 400px);
   grid-template-rows: 80%;
   margin: 0 25%; }
-  .choices .btn-paper {
+  .choices .paper {
     background-color: #FFF;
     border: 10px solid #506AF3;
     padding: 1.6rem;
@@ -70,13 +70,13 @@ body {
     display: block;
     border-radius: 50%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.5), -1px -1px 30px rgba(0, 0, 0, 0.2); }
-    .choices .btn-paper:hover {
+    .choices .paper:hover {
       display: inline-block;
       vertical-align: middle;
       -webkit-transform: perspective(1px) translateZ(0);
       transform: perspective(1px) translateZ(0);
       box-shadow: 0 0 1px rgba(0, 0, 0, 0); }
-  .choices .btn-rock {
+  .choices .rock {
     margin-left: 100%;
     background-color: #FFF;
     border: 10px solid #E13E5B;
@@ -88,13 +88,13 @@ body {
     display: block;
     border-radius: 50%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.5), -1px -1px 30px rgba(0, 0, 0, 0.2); }
-    .choices .btn-rock:hover {
+    .choices .rock:hover {
       display: inline-block;
       vertical-align: middle;
       -webkit-transform: perspective(1px) translateZ(0);
       transform: perspective(1px) translateZ(0);
       box-shadow: 0 0 1px rgba(0, 0, 0, 0); }
-  .choices .btn-scissors {
+  .choices .scissors {
     background-color: #FFF;
     border: 10px solid #ECA20E;
     padding: 1.6rem;
@@ -105,7 +105,7 @@ body {
     display: block;
     border-radius: 50%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.5), -1px -1px 30px rgba(0, 0, 0, 0.2); }
-    .choices .btn-scissors:hover {
+    .choices .scissors:hover {
       display: inline-block;
       vertical-align: middle;
       -webkit-transform: perspective(1px) translateZ(0);
