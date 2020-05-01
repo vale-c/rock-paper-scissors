@@ -1,7 +1,7 @@
 const choices = document.querySelectorAll('.choice');
 const score = document.getElementById('score');
 const result = document.getElementById('result');
-const restart = document.getElementById('restart');
+// const restart = document.getElementById('restart');
 const modal = document.querySelector('.modal');
 
 const scoreboard = {
@@ -19,9 +19,6 @@ function play(e){
   const winner = getWinner(playerChoice, houseChoice);
 
   showWinner(winner, houseChoice);
-
-  console.log("House score:", scoreboard.house);
-  console.log("Player score:", scoreboard.player);
 }
 
 // Get house choice 
@@ -92,16 +89,16 @@ function clearModal(e) {
 }
 
 // Restart game
-function restartGame() {
-  scoreboard.player = 0;
-  scoreboard.house = 0;
-  score.innerHTML = `
-    <p>0</p>
-  `;
-}
+// function restartGame() {
+//   scoreboard.player = 0;
+//   scoreboard.house = 0;
+//   score.innerHTML = `
+//     <p>0</p>
+//   `;
+// }
 
 // Event listeners
 choices.forEach(choice => choice.addEventListener('click', play));
 window.addEventListener('click', clearModal);
-restart.addEventListener('click', restartGame);
+// restart.addEventListener('click', restartGame);
 

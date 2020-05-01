@@ -6,7 +6,6 @@
 html,
 body {
   background: #192346;
-  background: linear-gradient(90deg, #192346 0%, #18275c 30%, #18275c 60%, #192346 90%);
   color: #FFF;
   font-size: 1.5rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -33,19 +32,19 @@ body {
     .box .rock.scissors,
     .box .paper.scissors,
     .box .scissors.scissors {
-      margin-bottom: 1rem; }
+      margin-bottom: 1.5rem; }
   .box .card-score {
     background-color: #FAFAFA;
     color: #514F5D;
     border-radius: 5px;
-    padding: 25px 40px; }
+    padding: 35px 50px; }
     .box .card-score .score-title {
       font-size: 26px;
       font-weight: 600;
       color: #B5B8C7;
       text-align: center; }
     .box .card-score:last-child {
-      margin-top: -20%;
+      margin-top: -22%;
       margin-left: auto; }
     .box .card-score .score p {
       font-size: 26px;
