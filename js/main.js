@@ -66,21 +66,30 @@ function showWinner(winner, houseChoice, playerChoice) {
     // Increase Player Score
     scoreboard.player++;
     // Show Modal Result
-    result.innerHTML = `<h4 class="text-win">You Win</h4>
-    <p>You picked <strong>${playerChoice}</strong></p>
-    <p>House picked <strong>${houseChoice.charAt(0).toUpperCase() + houseChoice.slice(1)}</strong></p>
+    result.innerHTML = `
+      <h4 class="text-win">You Win</h4>
+      <p>You picked <strong>${playerChoice}</strong></p>
+      <i class="fas fa-hand-${playerChoice} fa-3x"></i>
+      <p>House picked <strong>${houseChoice.charAt(0).toUpperCase() + houseChoice.slice(1)}</strong></p>
+      <i class="fas fa-hand-${houseChoice} fa-3x"></i>
     `;
 
     } else if (winner === 'house') {
     scoreboard.house++;
     result.innerHTML =  `<h4 class="text-lose">You Lose</h4>
-    <p>You picked <strong>${playerChoice}</strong></p>
-    <p>House picked <strong>${houseChoice.charAt(0).toUpperCase() + houseChoice.slice(1)}</strong></p>`;
+    <p>You picked <strong>${playerChoice}</strong>
+    <i class="fas fa-hand-${playerChoice} fa-3x"></i></p>
+    <p>House picked <strong>${houseChoice.charAt(0).toUpperCase() + houseChoice.slice(1)}</strong></p>
+    <i class="fas fa-hand-${houseChoice} fa-3x"></i>
+    `;
 
     } else {
     result.innerHTML = `<h4 class="text-draw">It's a draw!</h4>
     <p>You picked <strong>${playerChoice}</strong></p>
-    <p>House picked <strong>${houseChoice.charAt(0).toUpperCase() + houseChoice.slice(1)}</strong></p>`;
+    <i class="fas fa-hand-${playerChoice} fa-3x"></i>
+    <p>House picked <strong>${houseChoice.charAt(0).toUpperCase() + houseChoice.slice(1)}</strong></p>
+    <i class="fas fa-hand-${houseChoice} fa-3x"></i>
+    `;
   }
   // Show Score
   score.innerHTML = `<p>${scoreboard.player}</p> `;
