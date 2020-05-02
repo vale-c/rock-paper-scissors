@@ -170,15 +170,19 @@ body {
 
 .restart-btn {
   border-radius: 5px;
-  background-color: $card-score-bg;
+  background: $card-score-bg;
   color: $score-text;
   font-size: 16px;
   font-family: $font;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
   margin-left: 45%;
-  margin-bottom: 3rem;
+  margin-top: 8rem;
   padding: 10px 15px;
+  &:hover {
+    background-color: $blue-border;
+    color: $white;
+  }
 }
 
 .text-win {
@@ -191,7 +195,7 @@ body {
 
 .attribution {
   font-size: .875rem;
-  margin-top: 10rem;
+  margin-top: 2rem;
   text-align: center;
   a {
     color: $white;

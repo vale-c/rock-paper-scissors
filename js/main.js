@@ -11,7 +11,7 @@ const scoreboard = {
 
 // Play Game
 function play(e){
-  //restart.style.display = 'inline-block';
+  restart.style.display = 'inline-block';
 
   const playerChoice = e.target.id;
 
@@ -69,26 +69,26 @@ function showWinner(winner, houseChoice, playerChoice) {
     result.innerHTML = `
       <h4 class="text-win">You Win</h4>
       <p>You picked <strong>${playerChoice}</strong></p>
-      <i class="fas fa-hand-${playerChoice} fa-3x"></i>
+      <i class="fas fa-hand-${playerChoice} fa-2x"></i>
       <p>House picked <strong>${houseChoice.charAt(0).toUpperCase() + houseChoice.slice(1)}</strong></p>
-      <i class="fas fa-hand-${houseChoice} fa-3x"></i>
+      <i class="fas fa-hand-${houseChoice} fa-2x"></i>
     `;
 
     } else if (winner === 'house') {
     scoreboard.house++;
     result.innerHTML =  `<h4 class="text-lose">You Lose</h4>
-    <p>You picked <strong>${playerChoice}</strong>
-    <i class="fas fa-hand-${playerChoice} fa-3x"></i></p>
+    <p>You picked <strong>${playerChoice}</strong></p>
+    <i class="fas fa-hand-${playerChoice} fa-2x"></i>
     <p>House picked <strong>${houseChoice.charAt(0).toUpperCase() + houseChoice.slice(1)}</strong></p>
-    <i class="fas fa-hand-${houseChoice} fa-3x"></i>
+    <i class="fas fa-hand-${houseChoice} fa-2x"></i>
     `;
 
     } else {
     result.innerHTML = `<h4 class="text-draw">It's a draw!</h4>
     <p>You picked <strong>${playerChoice}</strong></p>
-    <i class="fas fa-hand-${playerChoice} fa-3x"></i>
+    <i class="fas fa-hand-${playerChoice} fa-2x"></i>
     <p>House picked <strong>${houseChoice.charAt(0).toUpperCase() + houseChoice.slice(1)}</strong></p>
-    <i class="fas fa-hand-${houseChoice} fa-3x"></i>
+    <i class="fas fa-hand-${houseChoice} fa-2x"></i>
     `;
   }
   // Show Score
@@ -104,16 +104,16 @@ function clearModal(e) {
 }
 
 // Restart game
-// function restartGame() {
-//   scoreboard.player = 0;
-//   scoreboard.house = 0;
-//   score.innerHTML = `
-//     <p>0</p>
-//   `;
-// }
+function restartGame() {
+  scoreboard.player = 0;
+  scoreboard.house = 0;
+  score.innerHTML = `
+    <p>0</p>
+  `;
+}
 
 // Event listeners
 choices.forEach(choice => choice.addEventListener('click', play));
 window.addEventListener('click', clearModal);
-// restart.addEventListener('click', restartGame);
+restart.addEventListener('click', restartGame);
 
